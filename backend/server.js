@@ -20,7 +20,10 @@ app.use("/api/movements", movementRoutes);
 
 // connect to db
 mongoose
-  .connect(process.env.MONG_URI)
+  //LOCAL:
+  .connect(process.env.MONGO_LOCAL_URI)
+  // ATLAS:
+  // .connect(process.env.MONGO_ATLAS_URI)
   .then(() => {
     console.log("connect to db");
     // Listening for requests
