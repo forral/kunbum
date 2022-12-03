@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ES3",
+        "module": "commonjs",
+        "strictNullChecks": true,
+        "esModuleInterop": true,
+        "jsx": "react-jsx"
+    },
+    "include": [
+        "src", "cenas.ts"
+    ]
+}
