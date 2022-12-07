@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
 interface AppProps {
-  message?: string;
+  message?: string
 }
 
-function App({ message = "hello world" }: AppProps) {
-  return <div>{message}</div>;
+function App({ message = 'hello world' }: AppProps) {
+  return <div>{message}</div>
 }
 
-export default App;
+export default App
