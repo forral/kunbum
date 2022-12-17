@@ -1,32 +1,29 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-module.exports = {
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
-  ],
-  module: {
-    rules: [
-      {
-        test: /.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-          },
+export const plugins = [
+  new HtmlWebpackPlugin({
+    template: './src/index.html',
+  }),
+]
+export const module = {
+  rules: [
+    {
+      test: /.js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react'],
         },
       },
-      {
-        test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
-        use: ["ts-loader"],
-      },
-    ],
-  },
-  resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js"],
-  },
-};
+    },
+    {
+      test: /\.(ts|tsx)$/,
+      exclude: /node_modules/,
+      use: ['ts-loader'],
+    },
+  ],
+}
+export const resolve = {
+  extensions: ['.tsx', '.ts', '.jsx', '.js'],
+}

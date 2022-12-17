@@ -1,7 +1,7 @@
-const { merge } = require("webpack-merge");
-const webpackConfig = require("./webpack.config");
+import { merge } from 'webpack-merge'
+import webpackConfig from './webpack.config'
 
-module.exports = merge(webpackConfig, {
-  mode: "development",
-  entry: "./src/index.tsx",
-});
+export default merge(webpackConfig, {
+  mode: 'development',
+  entry: './src/index.tsx',
+})
