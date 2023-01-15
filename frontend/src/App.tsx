@@ -1,11 +1,15 @@
 import React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
 
-interface IAppProps {
-	title?: string;
-}
+import Movements from './pages/Movements/Movements';
 
-function App(props: IAppProps) {
-	return <h1>entry point</h1>;
+function App() {
+  return (
+    <>
+      <CssBaseline />
+      <Movements />
+    </>
+  );
 }
 
 export default App;

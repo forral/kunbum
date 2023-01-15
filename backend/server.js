@@ -2,6 +2,8 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
+var cors = require("cors");
+
 const movementRoutes = require("./routes/movements");
 const categoryRoutes = require("./routes/categories");
 
@@ -10,6 +12,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(cors());
 
 app.use((req, res, next) => {
   console.log(req.path, req.method);
