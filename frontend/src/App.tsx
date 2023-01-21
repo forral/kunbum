@@ -1,14 +1,12 @@
 import React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-
 import Movements from './pages/Movements/Movements';
+import { Container } from '@mui/material';
 
 function App() {
   return (
-    <>
-      <CssBaseline />
+    <Container>
       <Movements />
-    </>
+    </Container>
   );
 }
 
